@@ -1,0 +1,27 @@
+body {
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+}
+
+.image {
+    width: 250px;
+    height: 250px;
+}
+
+h1 {
+    width: 30%;
+    margin: 50px;
+    font-size: 50px;
+    padding: 40px;
+    background-color: azure;
+}
+
+p {
+    font-size: medium;
+    text-align: justify;
+    background-color: white;
+    width: 30%;
+    padding: 40px;
+    margin: 50px;
+}
