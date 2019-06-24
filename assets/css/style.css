@@ -8,16 +8,19 @@ body {
 .image {
     width: 200px;
     height: 200px;
-    float: left;
+    background-color: white;
+    margin: 50px;
+    width: 50%;
 }
 
 h1 {  
     border: blue solid 10px;
     width: 30%;
     margin: 50px;
-    font-size: 50px;
+    font-size: 30px;
     padding: 40px;
     background-color: azure;
+    text-align: center;
 }
 
 p {
@@ -27,4 +30,13 @@ p {
     width: 30%;
     padding: 40px;
     margin: 50px;
+}
+
+#score {
+    background-color: lightcoral;
+    color: white;
+    width: 30%;
+    margin: 50px;
+    padding: 40px;
+    text-align: left;
 }
