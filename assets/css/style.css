@@ -1,5 +1,6 @@
 body {
-    background-color: aquamarine;
+    background-image: url(../images/background.jpg);
+    background-position: right;
     font-family: Arial, Helvetica, sans-serif;
     color: darkblue;
 }
@@ -9,7 +10,8 @@ body {
     height: 250px;
 }
 
-h1 {
+h1 {  
+    border: blue solid 10px;
     width: 30%;
     margin: 50px;
     font-size: 50px;
