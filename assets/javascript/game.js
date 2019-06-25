@@ -6,18 +6,21 @@ console.log("The javascript is now running");
 var wins = 0;
 var losses = 0;
 
-//randomNumber variable
-var randomNumber = Math.floor(Math.random() * (120-19+1) + 19);
-console.log(randomNumber);
-
-//variable to generate a random value of each crystal
-var blueCrystal = Math.floor(Math.random() * (12-1+1) + 1);
-var greenCrystal = Math.floor(Math.random() * (12-1+1) + 1);
-var purpleCrystal = Math.floor(Math.random() * (12-1+1) + 1);
-var redCrystal = Math.floor(Math.random() * (12-1+1) + 1);
+var randomNumber = 0;
 
 //holds the value for the total score every time a crystal is clicked
 var score = 0;
+
+//creating function to generate random value for randomNumber and each crystal
+var generateRandom = Math.floor(Math.random() * (max - min + 1) + min);
+
+//random number variable
+randomNumber = generateRandom(19, 120);
+//crystal variables
+var blueCrystal = generateRandom(1,12);
+var greenCrystal = generateRandom(1,12);
+var purpleCrystal = generateRandom(1,12);
+var redCrystal = generateRandom(1, 12);
 
 //creating runGame function to start the game each time
 var runGame = function() {
