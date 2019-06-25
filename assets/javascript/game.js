@@ -22,50 +22,30 @@ var score = 0;
 //creating runGame function to start the game each time
 var runGame = function() {
 
-blueCrystal;
+    blueCrystal;
     console.log("Blue Crystal Value: " + blueCrystal);
 
-greenCrystal;
+    greenCrystal;
     console.log("Green Crystal Value: " + greenCrystal);
 
-purpleCrystal;
+    purpleCrystal;
     console.log("Purple Crystal Value: " + purpleCrystal);
 
-redCrystal;
+    redCrystal;
     console.log("Red Crystal Value: " + redCrystal);
 
-//using jQuery to display the random number that the user must match to win the game
-$("#random-number").html(randomNumber);
-$("#score").html(score);
+    //using jQuery to display the random number that the user must match to win the game
+    $("#random-number").html(randomNumber);
+    $("#score").html(score);
 
-    //displays alert when blue crystal is clicked
-    $("#blue").on("click", function() {
-
-        alert("You clicked the blue crystal");
-    });
-
-    //displays alert when green crystal is clicked
-    $("#green").on("click", function() {
-
-        alert("You clicked the green crystal");
-    });
-
-    //displays alert when purple crystal is clicked
-    $("#purple").on("click", function() {
-
-        alert("You clicked the purple crystal");
-    });
-
-    //displays alert when red crystal is clicked
-    $("#red").on("click", function() {
-        
-        alert("You clicked the red crystal");
-    });
+//ends the runGame function
+};
 
 
-    //creating if/else statement so that if the score goes above the randomNumber, the user loses
-    //else if the score exactly equals the randomNumber, the user wins
-    //else, the user must continue playing until they either win or lose
+
+//creating if/else statement so that if the score goes above the randomNumber, the user loses
+//else if the score exactly equals the randomNumber, the user wins
+//else, the user must continue playing until they either win or lose
     if (score > randomNumber) {
         alert("You have gone above the random number. You lose!");
         losses++;
@@ -79,8 +59,30 @@ $("#score").html(score);
         console.log("You need to keep going!");
     }
 
-//ends the entire function
-};
-
 
 runGame();
+
+//displays alert when blue crystal is clicked
+$("#blue").on("click", function() {
+
+    $("#score").html(blueCrystal);
+});
+
+//displays alert when green crystal is clicked
+$("#green").on("click", function() {
+
+    $("#score").html(greenCrystal);
+});
+
+//displays alert when purple crystal is clicked
+$("#purple").on("click", function() {
+
+    $("#score").html(purpleCrystal);
+});
+
+//displays alert when red crystal is clicked
+$("#red").on("click", function() {
+    
+    $("#score").html(redCrystal);
+
+});
