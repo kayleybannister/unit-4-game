@@ -31,11 +31,17 @@ p {
     margin: 10px;
 }
 
-#score {
-    background-color: lightcoral;
-    color: white;
-    width: 30%;
+#random-number {
     margin: 10px;
-    padding: 30px;
-    text-align: left;
+    width: 25%;
+}
+
+#win-lose {
+    margin: 10px;
+    width: 25%;
+}
+
+#score {
+    margin: 10px;
+    width: 30%;
 }
