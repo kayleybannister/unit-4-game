@@ -5,38 +5,37 @@ body {
     color: darkblue;
 }
 
-.image {
-    width: 200px;
-    height: 200px;
+img {
+    width: 100px;
+    height: 100px;
     background-color: white;
-    margin: 50px;
-    width: 50%;
+    margin: 10px;
 }
 
 h1 {  
     border: blue solid 10px;
     width: 30%;
-    margin: 50px;
+    margin: 10px;
     font-size: 30px;
-    padding: 40px;
+    padding: 30px;
     background-color: azure;
     text-align: center;
 }
 
 p {
-    font-size: medium;
+    font-size: 15px;
     text-align: justify;
     background-color: white;
     width: 30%;
-    padding: 40px;
-    margin: 50px;
+    padding: 30px;
+    margin: 10px;
 }
 
 #score {
     background-color: lightcoral;
     color: white;
     width: 30%;
-    margin: 50px;
-    padding: 40px;
+    margin: 10px;
+    padding: 30px;
     text-align: left;
 }
