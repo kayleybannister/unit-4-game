@@ -42,53 +42,60 @@ var runGame = function() {
 
     //using jQuery to display the random number that the user must match to win the game
     $("#random-number").html(randomNumber);
+
+    //using jQuery to display the user's score every time they click a crystal
     $("#score").html(score);
 
 //ends the runGame function
 };
 
-
-
-//creating if/else statement so that if the score goes above the randomNumber, the user loses
-//else if the score exactly equals the randomNumber, the user wins
-//else, the user must continue playing until they either win or lose
-    if (score > randomNumber) {
-        alert("You have gone above the random number. You lose!");
-        losses++;
-    }
-
-    else if (score === randomNumber) {
-        wins++;
-    }
-
-    else {
-        console.log("You need to keep going!");
-    }
-
-
+// calls the runGame function and begins the entire game
 runGame();
 
-//displays alert when blue crystal is clicked
+//using jQuery to display alert when a crystal is clicked
 $("#blue").on("click", function() {
 
-    alert("Blue");
+    console.log("You clicked the blue crystal");
+    
 });
 
 //displays alert when green crystal is clicked
 $("#green").on("click", function() {
 
-    alert("Green");
+    console.log("You clicked the green crystal");
 });
 
 //displays alert when purple crystal is clicked
 $("#purple").on("click", function() {
 
-    alert("Purple");
+    console.log("You clicked the purple crystal");
+    
 });
 
 //displays alert when red crystal is clicked
 $("#red").on("click", function() {
     
-    alert("Red");
+    console.log("You clicked the red crystal");
+    
 
 });
+
+//creating if/else statement so that if the score goes above the randomNumber, the user loses
+    //else if the score exactly equals the randomNumber, the user wins
+    //else, the user must continue playing until they either win or lose
+    if (score > randomNumber) {
+        alert("You have gone above the random number. You lose!");
+        losses++;
+        }
+    
+    else if (score === randomNumber) {
+        wins++;
+    }
+    
+    else {
+        console.log("You need to keep going!");
+    }
+
+//need to create a function that adds the value of each crystal every time it is clicked to the total score
+
+//need to create code that restarts the game after each win or loss and continuously updates the counter for both
