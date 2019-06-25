@@ -1,6 +1,5 @@
 body {
-    background-image: url(../images/background.jpg);
-    background-position: right;
+    background-color: aquamarine;
     font-family: Arial, Helvetica, sans-serif;
     color: darkblue;
 }
@@ -22,26 +21,42 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    width: 15%;
+    margin: 10px;
+    background-color: white;
+    padding: 20px;
+    float: left;
+}
+
 p {
     font-size: 15px;
     text-align: justify;
-    background-color: white;
     width: 30%;
     padding: 30px;
     margin: 10px;
+    background-color: white;
 }
 
 #random-number {
+    background-color: white;
     margin: 10px;
-    width: 25%;
+    width: 5%;
+    padding: 20px;
+    font-size: 25px;
+    float: left;
 }
 
 #win-lose {
     margin: 10px;
     width: 25%;
+    background-color: white;
+    padding: 30px;
 }
 
 #score {
     margin: 10px;
-    width: 30%;
+    width: 25%;
+    background-color: white;
+    padding: 30px;
 }
