@@ -8,22 +8,25 @@ var losses = 0;
 
 var randomNumber = 0;
 
-//holds the value for the total score every time a crystal is clicked
-var score = 0;
-
 //creating function to generate random value for randomNumber and each crystal
-var generateRandom = Math.floor(Math.random() * (max - min + 1) + min);
-
-//random number variable
-randomNumber = generateRandom(19, 120);
-//crystal variables
-var blueCrystal = generateRandom(1,12);
-var greenCrystal = generateRandom(1,12);
-var purpleCrystal = generateRandom(1,12);
-var redCrystal = generateRandom(1, 12);
+var generateRandom = function(min, max)
+ {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+ };
 
 //creating runGame function to start the game each time
 var runGame = function() {
+
+    //random number variable
+    randomNumber = generateRandom(19, 120);
+
+    //crystal variables
+    var blueCrystal = generateRandom(1, 12);
+    var greenCrystal = generateRandom(1, 12);
+    var purpleCrystal = generateRandom(1, 12);
+    var redCrystal = generateRandom(1, 12);
+
+    var score = blueCrystal + greenCrystal + purpleCrystal + redCrystal;
 
     blueCrystal;
     console.log("Blue Crystal Value: " + blueCrystal);
@@ -68,24 +71,24 @@ runGame();
 //displays alert when blue crystal is clicked
 $("#blue").on("click", function() {
 
-    $("#score").html(blueCrystal);
+    alert("Blue");
 });
 
 //displays alert when green crystal is clicked
 $("#green").on("click", function() {
 
-    $("#score").html(greenCrystal);
+    alert("Green");
 });
 
 //displays alert when purple crystal is clicked
 $("#purple").on("click", function() {
 
-    $("#score").html(purpleCrystal);
+    alert("Purple");
 });
 
 //displays alert when red crystal is clicked
 $("#red").on("click", function() {
     
-    $("#score").html(redCrystal);
+    alert("Red");
 
 });
