@@ -6,22 +6,24 @@ console.log("The javascript is now running");
 var wins = 0;
 var losses = 0;
 
-//need to create variables for the crystals
-var blueCrystal;
-var greenCrystal;
-var redCrystal;
-var purpleCrystal;
-
-//variable for score
-var score = 0;
-
 //randomNumber variable
 var randomNumber = Math.floor(Math.random() * (120-19+1) + 19);
 console.log(randomNumber);
 
 //value of each crystal
-var crystalValue = Math.floor(Math.random() * (12-1+1) + 1);
-console.log(crystalValue);
+var blueCrystal = Math.floor(Math.random() * (12-1+1) + 1);
+console.log("Blue Crystal Value: " + blueCrystal);
+
+var greenCrystal = Math.floor(Math.random() * (12-1+1) + 1);
+console.log("Green Crystal Value: " + greenCrystal);
+
+var purpleCrystal = Math.floor(Math.random() * (12-1+1) + 1);
+console.log("Purple Crystal Value: " + purpleCrystal);
+
+var redCrystal = Math.floor(Math.random() * (12-1+1) + 1);
+console.log("Red Crystal Value: " + redCrystal);
+
+var score = blueCrystal + greenCrystal + purpleCrystal + redCrystal;
 
 $(document).ready(function() {
 
@@ -29,32 +31,39 @@ $(document).ready(function() {
 $("#random-number").text(randomNumber);
 
     $("#blue").on("click", function() {
-        blueCrystal = crystalValue;
-        $("#score").text(crystalValue);
+
+        alert("You clicked the blue crystal");
+        $("#score").html(score);
     });
 
     $("#green").on("click", function() {
-        greenCrystal = crystalValue;
-        $("#score").text(crystalValue);
+
+        alert("You clicked the green crystal");
+        $("#score").html(score);
+
     });
 
     $("#purple").on("click", function() {
-        purpleCrystal = crystalValue;
-        $("#score").text(crystalValue);
+
+        alert("You clicked the purple crystal");
+        $("#score").html(score);
     });
 
     $("#red").on("click", function() {
-        redCrystal = crystalValue;
-        $("#score").text(crystalValue);
+        
+        alert("You clicked the red crystal");
+        $("#score").html(score);
+
     });
 
-    if (crystalValue > randomNumber) {
+
+    if (score > randomNumber) {
         alert("You have gone above the random number. You lose!");
-        losses++;
     }
 
-    else if (crystalValue === randomNumber) {
+    else if (score === randomNumber) {
         wins++;
     }
+
 //ends the entire function
 });
