@@ -15,8 +15,10 @@ var purpleCrystal;
 //variable for score
 var score = 0;
 
-//randomNumber variable - will need to create a function so that the values can only be between 19 and 120
+//randomNumber variable
 var randomNumber = Math.floor(Math.random() * (120-19+1) + 19);
+console.log(randomNumber);
 
-//value of each crystal - will need function for value to be between 1 and 12
-var crystalValue = 0;
+//value of each crystal
+var crystalValue = Math.floor(Math.random() * (12-1+1) + 1);
+console.log(crystalValue);
