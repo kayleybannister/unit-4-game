@@ -1,16 +1,16 @@
-console.log("The javascript is now running");
-
 //DECLARING VARIABLES
-
-//variables for wins and losses
 var wins = 0;
 var losses = 0;
-
 var randomNumber = 0;
+var score = 0;
+var blueCrystal = generateRandom(1, 12);
+var greenCrystal = generateRandom(1, 12);
+var purpleCrystal = generateRandom(1, 12);
+var redCrystal = generateRandom(1, 12);
+//=============================================================
 
 //creating function to generate random value for randomNumber and each crystal
-var generateRandom = function(min, max)
- {
+function generateRandom(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min);
  };
 
@@ -20,11 +20,6 @@ var runGame = function() {
     //random number variable
     randomNumber = generateRandom(19, 120);
 
-    //crystal variables
-    var blueCrystal = generateRandom(1, 12);
-    var greenCrystal = generateRandom(1, 12);
-    var purpleCrystal = generateRandom(1, 12);
-    var redCrystal = generateRandom(1, 12);
 
     var score = blueCrystal + greenCrystal + purpleCrystal + redCrystal;
 
@@ -44,7 +39,6 @@ var runGame = function() {
     $("#random-number").html(randomNumber);
 
     //using jQuery to display the user's score every time they click a crystal
-    $("#score").html(score);
 
 //ends the runGame function
 };
@@ -54,30 +48,26 @@ runGame();
 
 //using jQuery to display alert when a crystal is clicked
 $("#blue").on("click", function() {
-
-    console.log("You clicked the blue crystal");
-    
+    score = blueCrystal + score;
+    $("#score").text(score);
 });
 
 //displays alert when green crystal is clicked
 $("#green").on("click", function() {
-
-    console.log("You clicked the green crystal");
+    score = greenCrystal + score;
+    $("#score").text(score);
 });
 
 //displays alert when purple crystal is clicked
 $("#purple").on("click", function() {
-
-    console.log("You clicked the purple crystal");
-    
+    score = purpleCrystal + score;
+    $("#score").text(score);
 });
 
 //displays alert when red crystal is clicked
 $("#red").on("click", function() {
-    
-    console.log("You clicked the red crystal");
-    
-
+    score = redCrystal + score;
+    $("#score").text(score);
 });
 
 //creating if/else statement so that if the score goes above the randomNumber, the user loses

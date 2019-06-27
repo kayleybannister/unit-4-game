@@ -45,17 +45,19 @@ Every time the game starts, the random number and the value of each crystal will
 Good luck!</p>
 
 <!--holds the div for the random number to be displayed-->
-<div>
-    <h2>Try to Match this Number</h2>
-    <p id="random-number"></p>
+<div id="matchThis">
+    <h2 id="tryMatch">Try to Match this Number</h2>
+    <h2 id="random-number"></h2>
 </div>
 
 <!--holds the div for the number of wins and losses-->
 <div id="win-lose">
-    <p>Wins: 
-    <br>
-    <br>
-    Losses:</p>
+    <div class="winOlose">
+        <h3>Wins: <span id="wins">0</span></h3> 
+    </div>
+    <div class="winOrlose">
+        <h3>Losses: <span id="losses">0</span> </h3>
+    </div>
 </div>
 
 <div class="crystals">
@@ -67,8 +69,8 @@ Good luck!</p>
 
 <!--holds the score for each crystal clicked-->
 <div>
-    <h2>Your score is:</h2>
-    <p id="score"></p>
+    <h2>Your score is: <span id="score">0</span></h2>
+    
 </div>
 <!--link to game.js-->
 <script src="assets/javascript/game.js"></script>

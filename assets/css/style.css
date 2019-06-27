@@ -22,11 +22,9 @@ h1 {
 }
 
 h2 {
-    width: 15%;
     margin: 10px;
     background-color: white;
     padding: 20px;
-    float: left;
 }
 
 p {
@@ -44,7 +42,7 @@ p {
     width: 5%;
     padding: 20px;
     font-size: 25px;
-    float: left;
+    float: right;
 }
 
 #win-lose {
@@ -54,9 +52,17 @@ p {
     padding: 30px;
 }
 
-#score {
-    margin: 10px;
-    width: 25%;
-    background-color: white;
-    padding: 30px;
+.winOrlose {
+    text-align: left;
 }
+
+#matchThis {
+height: 90px;
+width: 375px;
+background-color: white;
+}
+
+#tryMatch {
+    float: left;
+}
+
